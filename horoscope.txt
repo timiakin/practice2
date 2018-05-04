@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+h1{
+color: blue;
+}
+Input{
+color : red;
+}
+h2{
+color : green;
+ padding: 20px;
+ border-style: solid;
+ width: 200px;
+ border-color: black;
+font-style: italic;
+}
+
+</style>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Please Input The Month And The Day <br> </h1>
+<h2 id='displayBox'></h2>
+
+<Input type="text" id="inputText1" > Month<br />
+
+<Input type="text" id="inputText2" > Day <br />
+
+<button onclick= "printt()" >Send</button>
+
+
+
+<script>
+
+        function printt()
+        {
+        var x = ""
+        
+        var month = document.getElementById('inputText1').value;
+        var month = month.toLowerCase() 
+        
+        
+       var day = document.getElementById('inputText2').value;
+        
+   
+   
+   if(month == "january")
+       { 
+       if (day >= 1 && day <= 15)
+       { 
+      
+      x = "You are lucky and you'll be rich!"
+      
+      }
+       else if (day >= 15 && day <= 30)
+       {
+       x = "Beware of these birds bro!"
+       
+       }
+           
+     
+   } else if (month == "february")
+    {
+      if (day >= 1 && day <= 15){ 
+      
+      x = "feb aint bad either good luck tho lol!"
+      
+      }
+       else if (day >= 15 && day <= 30)
+       {
+       x = "Naaa you'll be fine!"
+       
+       } 
+       
+       
+     }  else if (month == "march")
+    
+    {
+      if (day >= 1 && day <= 15){ 
+      
+      x = "feb aint bad either good luck tho lol!"
+      
+      }
+       else if (day >= 15 && day <= 30)
+       {
+       x = "Naaa you'll be fine!"
+       
+       }
+          
+           }
+           else{
+      x = "Incorrect Input"
+      }
+      
+      
+      document.getElementById('displayBox').innerHTML = x;
+        
+        }
+        
+</script>
+
+
+</body>
+</html>
